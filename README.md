@@ -1,27 +1,21 @@
-# Telegram Bot (Telegraf + MongoDB)
+# Telegram Bot avec Telegraf
 
-## Installation
+## Lancement
 
-```bash
-npm install
-```
+1. Crée un fichier `.env` à la racine avec :
+   ```
+   BOT_TOKEN=ton_token
+   MONGODB_URI=ton_uri_mongodb
+   ```
 
-## Lancement local
+2. Lance le projet :
+   ```
+   npm install
+   npm start
+   ```
 
-Créer un fichier `.env` avec :
+## Déploiement Render
 
-```
-BOT_TOKEN=TON_TOKEN
-MONGODB_URI=URI_MONGODB
-```
-
-Puis :
-
-```bash
-npm start
-```
-
-## Déploiement sur Render
-
-- Type de service : **Background Worker**
-- Ajouter les variables d'environnement BOT_TOKEN et MONGODB_URI
+- Type : **Background Worker**
+- Start Command : `node index.js`
+- Root Directory : (laisse vide si tout est à la racine)
