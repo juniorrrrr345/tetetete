@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: telegram-bot
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: BOT_TOKEN
+        value: 7556108523:AAHEtYdygrQUlWS1Ll_eC-Vo6qx7XIXgdsE
+      - key: MONGODB_URI
+        value: mongodb+srv://fxxrev:TUMsXYnTfgw7viqR@cluster0.qa5j3nm.mongodb.net/telegrambot?retryWrites=true&w=majority&appName=Cluster0
